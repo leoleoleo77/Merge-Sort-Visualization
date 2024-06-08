@@ -65,7 +65,7 @@ function animateMergeAlgorithmPlacement(element, target) {
             // Hide animated element
             $(element).css('opacity', '0');
             // Confirm ordered index
-            $(target).css("background", "#21db37");
+            $(target).css("background", "#324B20");
             resolve();
         }, timeout.value);
     });

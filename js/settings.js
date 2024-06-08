@@ -20,7 +20,7 @@ function getArrayValue() {
  * @returns {Javascript Object} An object containing the value for the animation miliseconds
  */
 function getTimeout() {
-    return miliseconds;
+    return {value: 500};
 }
 
 $(document).ready(() => {
