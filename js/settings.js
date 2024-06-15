@@ -25,25 +25,13 @@ function getTimeout() {
 
 $(document).ready(() => {
 
-    // Side Menu
-
-    $('#settings-btn').click(() => {
-        $('#settings').css('transform', "translateX(400px)");
-        $("header").animate({opacity: 0.5}, {duration: 400});
-        $("main").animate({opacity: 0.5}, {duration: 400});
-    });
-    $('#close-menu').click(() => {
-        $('#settings').css('transform', 'translateX(0)');
-        $("header").animate({opacity: 1}, {duration: 400});
-        $("main").animate({opacity: 1}, {duration: 400});
-    });
-
     // Save Settings Button 
 
     $('#save-settings').click(() => {
         try {
             if ($('#arr').val() != '') {
-                let arr = parse($('#arr').val());
+                let arr = "[" +  $('#arr').val() + "]";
+                arr = parse(arr);
                 $container = displayArray(arr);
                 sorted = false;
             }

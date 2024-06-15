@@ -45,3 +45,13 @@ function parse(str) {
     let replaced = str.replace(/\s/g, '');
     return JSON.parse(replaced);
 }
+
+function generateRandomArray() {
+	let arr = [];
+	for (let i = 0; i < 8; i++) {
+		let ranNumber = Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10);
+		arr.push(ranNumber);
+	}
+	$container = displayArray(arr);
+	document.getElementById('arr').value = arr;
+}
